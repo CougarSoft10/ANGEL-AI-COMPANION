@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#111117">
+  <title>Vice Atlas | Get lost in Leonida</title>
+  <meta name="description" content="An independent GTA VI fan guide. Explore Leonida's community map and six regions, browse official screenshots, watch official videos and listen in the radio lounge.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/vice.webp">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="style.css?v=20261102-rockstar">
+  <link rel="stylesheet" href="radio.css?v=20261101-uploads">
+  <link rel="stylesheet" href="videos.css?v=20261101-fullscreen">
+  <link rel="stylesheet" href="screenshots.css?v=20261102-complete">
+  <link rel="stylesheet" href="theme.css?v=20261102-rockstar">
+  <link rel="stylesheet" href="refinements.css?v=20261102-mobile">
+  <script src="app.js?v=20261102-mobile" defer></script>
+  <script src="radio.js?v=20261102-seek" defer></script>
+  <script src="videos.js?v=20261102-gallery" defer></script>
+  <script src="screenshots-data.js?v=20261102-complete" defer></script>
+  <script src="screenshots.js?v=20261102-complete" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <a class="wordmark" href="#top" aria-label="Vice Atlas home">Vice Atlas</a>
+    <span class="site-description">An independent GTA VI guide</span>
+    <button id="menu-toggle" class="menu-toggle" aria-controls="navigation" aria-expanded="false">Menu</button>
+    <nav id="navigation" aria-label="Main navigation">
+      <a href="#map-chapter">The map</a>
+      <a href="#places">The places</a>
+      <a href="#videos">Official videos</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#radio">Radio lounge</a>
+      <a href="#shortlist">Your shortlist <span id="nav-count">(0)</span></a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero chapter" aria-labelledby="hero-title" data-tone="dark">
+      <div class="hero-copy">
+        <h1 id="hero-title">Get lost<br>in Leonida.</h1>
+        <p>An independent GTA VI destination guide, with the State of Leonida community map built right in.</p>
+        <div class="hero-actions"><a class="button primary" href="#map-chapter">Explore the map <span aria-hidden="true">↗</span></a><a class="hero-radio" href="#radio"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m9 5 11 7-11 7V5Z"/></svg>Radio lounge</a></div>
+      </div>
+      <div class="hero-art"><img src="assets/vice.webp" alt="Jason and Lucia overlooking Vice City in Rockstar’s GTA VI promotional artwork" fetchpriority="high"></div>
+      <div class="hero-bottom"><span>Big city. Bad company. Better detours.</span><a href="#places">Find your place</a></div>
+    </section>
+
+    <section class="map-chapter chapter" id="map-chapter" aria-labelledby="map-title" data-tone="dark">
+      <div class="chapter-head">
+        <h2 id="map-title" class="reveal">Your next<br>wrong turn.</h2>
+        <div class="head-copy reveal"><p>Explore the community’s reconstruction with the original <a href="https://map.stateofleonida.net/" target="_blank" rel="noopener noreferrer">State of Leonida map</a>. The embedded viewer needs a standalone site address; the original-map link is always available.</p><p class="small">A community-made map, not Rockstar’s final map. Its markers and geography are maintained by its creators.</p></div>
+      </div>
+      <div class="map-shell" id="map-shell" role="region" aria-label="State of Leonida map viewer" data-ui>
+        <div class="map-toolbar">
+          <a href="https://map.stateofleonida.net/" target="_blank" rel="noopener noreferrer" class="map-owner">Map by State of Leonida</a>
+          <div class="viewer-actions">
+            <button id="expand-map" disabled aria-expanded="false">Expand map</button>
+            <button id="reload-map" disabled>Reload</button>
+            <button id="unload-map" disabled>Unload</button>
+          </div>
+        </div>
+        <div class="map-stage" id="map-stage">
+          <div class="map-invitation" id="map-invitation">
+            <div class="map-invite-copy"><h3>Leonida.<br>Up close.</h3><p id="map-invite-description">Open the full interactive map without leaving Vice Atlas.</p><button class="button light" id="load-map">Load interactive map</button><p class="small">Loads the provider’s website, including its own cookies, ads and external services.</p></div>
+            <img src="assets/city.webp" alt="Vice City’s coast and skyline in official GTA VI imagery" loading="lazy">
+          </div>
+        </div>
+        <div class="map-foot"><p id="map-status" role="status">Ready when you are. The map loads only when you choose.</p><a href="https://map.stateofleonida.net/en/" target="_blank" rel="noopener noreferrer">Open original map</a></div>
+      </div>
+      <p class="map-credit small">Drag to pan. Use the map’s own zoom and marker controls. If the embedded site is unavailable in your browser, the original-map link stays available. <a href="https://map.stateofleonida.net/" target="_blank" rel="noopener noreferrer">Community map and credits</a>.</p>
+      <p class="map-credit small">Map address: <span id="map-address">https://map.stateofleonida.net/en/</span> <button id="copy-map" class="text-action">Copy address</button></p>
+    </section>
+
+    <section class="places chapter" id="places" aria-labelledby="places-title" data-tone="navy">
+      <div class="chapter-head">
+        <h2 id="places-title" class="reveal">Pick your kind<br>of trouble.</h2>
+        <div class="head-copy reveal"><p>Six regions. Very different reasons to miss your turn.</p><p class="small">Browse the scenery, then keep the places you want to revisit. These are destination notes, not invented missions or guaranteed activities.</p></div>
+      </div>
+      <div class="place-browser">
+        <div class="place-index">
+          <label for="place-search">Find a region</label>
+          <input id="place-search" type="search" placeholder="Try Keys or Grassrivers…" autocomplete="off">
+          <div id="place-options" class="place-options" role="group" aria-label="Choose a Leonida region">
+            <button data-place="vice" class="selected" aria-pressed="true">Vice City</button>
+            <button data-place="keys" aria-pressed="false">Leonida Keys</button>
+            <button data-place="grassrivers" aria-pressed="false">Grassrivers</button>
+            <button data-place="gellhorn" aria-pressed="false">Port Gellhorn</button>
+            <button data-place="ambrosia" aria-pressed="false">Ambrosia</button>
+            <button data-place="kalaga" aria-pressed="false">Mount Kalaga</button>
+          </div>
+          <div id="place-empty" hidden><p>No region found.</p><button id="reset-search" class="text-action">Show all regions</button></div>
+          <button class="surprise-button" id="surprise-place">Choose a detour for me</button>
+        </div>
+        <article class="place-feature" id="place-feature">
+          <div class="place-photo"><img id="place-image" src="assets/city.webp" alt="Vice City’s waterfront in official GTA VI imagery" loading="lazy"></div>
+          <div class="place-details"><div><h3 id="place-name">Vice City</h3><p id="place-description">The coastal metropolis: beaches, high-rises and a commercial waterfront. Start with the skyline, then look beyond the postcard.</p><a id="place-source" href="https://consolepulse.com/multiplatform/gta/guides/gta-6-vice-city-leonida-locations-guide" target="_blank" rel="noopener noreferrer">Read the location reporting</a></div><button class="button primary" id="save-place" aria-pressed="false">Save this place +</button></div>
+        </article>
+      </div>
+      <div class="postcard-strip" aria-label="More of Leonida">
+        <figure class="reveal"><img src="assets/keys.webp" alt="The tropical Leonida Keys in official GTA VI imagery" loading="lazy"><figcaption>Leonida Keys</figcaption></figure>
+        <figure class="reveal"><img src="assets/swamp.webp" alt="Wetlands and waterways in official GTA VI imagery" loading="lazy"><figcaption>Grassrivers</figcaption></figure>
+        <figure class="reveal"><img src="assets/kalaga.webp" alt="Wooded wilderness in official GTA VI imagery" loading="lazy"><figcaption>Mount Kalaga</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="video-chapter chapter" id="videos" aria-labelledby="videos-title" data-tone="dark">
+      <div class="chapter-head">
+        <h2 id="videos-title" class="reveal">Made to<br>be seen.</h2>
+        <div class="head-copy reveal"><p>Your GTA VI screening room. Five selected videos from <a href="https://www.rockstargames.com/VI/media/videos" target="_blank" rel="noopener noreferrer">Rockstar’s video library</a>: four trailers and features, plus the animated cover art.</p><details class="video-library-details"><summary>About this video library</summary><p class="small">Sources verified 1 November 2026. This is a curated selection, not the complete Rockstar library or a live feed. Character clips are not included. Videos load only after selection. Trailer 1 and Trailer 2 use browser-compatible versions of Rockstar’s downloadable promotional videos in this private preview; other videos stream from Rockstar. Some material is age-restricted; provider availability may vary.</p></details><a class="button primary video-catalogue-jump" href="#video-catalogue">Browse all 5 videos <span aria-hidden="true">↓</span></a></div>
+      </div>
+      <div class="video-layout">
+        <article class="video-feature" aria-label="Official GTA VI video player">
+          <button id="video-browse" class="video-browse" type="button">Back to video list</button>
+          <div id="video-screen" class="video-screen"><img src="assets/videos/launch.webp" alt="Rockstar's official Launch Trailer poster" loading="lazy"></div>
+          <div class="video-feature-copy">
+            <h3 id="video-current-title">Launch Trailer</h3>
+            <p id="video-current-meta" class="small">Rockstar Games · Select a video to load its official source.</p>
+            <div id="video-age" class="video-age" hidden>
+              <p>Rockstar marks An Extended Look as age-gated. Confirm that you are 18 or older to load this video. Your confirmation lasts for this visit only; no date of birth is collected.</p>
+              <label><input id="video-adult" type="checkbox">I am 18 or older</label>
+              <div class="video-age-actions"><button class="button light" id="video-age-load" disabled>Confirm & load video</button><button id="video-age-cancel" class="text-action">Cancel</button></div>
+            </div>
+            <p id="video-status" class="small" role="status">No video is loaded. Choose a release to watch without leaving Vice Atlas.</p>
+            <div class="video-feature-actions"><button class="button light" id="video-launch">Watch launch trailer</button><button class="button light" id="video-fullscreen" type="button" aria-controls="video-screen" aria-pressed="false" disabled>Fullscreen</button><a id="video-source" href="https://www.rockstargames.com/VI/launch-trailer" target="_blank" rel="noopener noreferrer">View official page</a></div>
+            <div class="video-close-row"><span class="small">Official footage · Native player</span><button id="video-close" disabled>Close video</button></div>
+          </div>
+        </article>
+        <div id="video-catalogue" class="video-catalogue">
+          <div class="video-tools">
+            <div class="video-filters" role="group" aria-label="Filter official videos"><button data-video-filter="all" aria-pressed="true">All 5</button><button data-video-filter="trailers" aria-label="Trailers and features: 4 videos" aria-pressed="false"><span class="video-filter-long">Trailers & features 4</span><span class="video-filter-short" aria-hidden="true">Trailers 4</span></button><button data-video-filter="artwork" aria-pressed="false">Cover art 1</button></div>
+            <label class="video-search-label" for="video-search">Find official footage</label><div class="video-search-field"><input type="search" id="video-search" placeholder="Search videos" autocomplete="off"><button id="video-clear" type="button" aria-label="Clear video search" hidden>Clear</button></div>
+          </div>
+          <p id="video-results" class="small" role="status">5 selected videos. Choose a release to watch here.</p><div id="video-grid" class="video-grid"></div>
+        </div>
+      </div>
+      <p class="video-note small">Video and thumbnails © Rockstar Games. Selected footage comes from <a href="https://www.rockstargames.com/VI/media/videos" target="_blank" rel="noopener noreferrer">Rockstar’s official media library</a>; counts describe this selection only. For browser compatibility, this private preview includes 720p H.264/AAC versions of Rockstar’s downloadable <a href="https://media-rockstargames-com.akamaized.net/VI/downloads/videos/GTAVI_Trailer_1/GTAVI_Trailer_1.mp4" target="_blank" rel="noopener noreferrer">Trailer 1</a> and <a href="https://media-rockstargames-com.akamaized.net/VI/downloads/videos/GTAVI_Trailer_2/GTAVI_Trailer_2.mp4" target="_blank" rel="noopener noreferrer">Trailer 2</a>, with their full original duration and soundtrack. Other videos contact Rockstar and its CDN; their privacy terms apply. Native playback pauses the radio; starting music pauses video. For additional language or accessibility options, use the official page. Close unloads the selected stream.</p>
+    </section>
+
+    <section class="screenshot-chapter chapter" id="screenshots" aria-labelledby="screenshots-title" data-tone="forest">
+      <div class="chapter-head">
+        <h2 id="screenshots-title" class="reveal">Official<br>screenshots.</h2>
+        <div class="head-copy reveal"><p>All three collections from <a href="https://www.rockstargames.com/VI/media/screenshots" target="_blank" rel="noopener noreferrer">Rockstar Games’ screenshot library</a>, together here. Open any image for a closer look.</p><p class="small">99 screenshots, 51 Ultimate Edition Benefits images and 12 Vintage Vice City Pack images. Full page snapshot verified 2 November 2026, not a live feed.</p></div>
+      </div>
+      <div class="shot-tools">
+        <div class="shot-filters" role="group" aria-label="Filter official screenshots">
+          <button type="button" data-shot-filter="all" data-shot-label="All" aria-pressed="true">All 162</button>
+          <button type="button" data-shot-filter="duo" data-shot-label="Jason &amp; Lucia" aria-pressed="false">Jason &amp; Lucia 33</button>
+          <button type="button" data-shot-filter="characters" data-shot-label="Characters" aria-pressed="false">Characters 24</button>
+          <button type="button" data-shot-filter="locations" data-shot-label="Locations" aria-pressed="false">Locations 42</button>
+          <button type="button" data-shot-filter="ultimate" data-shot-label="Ultimate Edition" aria-pressed="false">Ultimate Edition 51</button>
+          <button type="button" data-shot-filter="vintage" data-shot-label="Vintage Vice City" aria-pressed="false">Vintage Vice City 12</button>
+        </div>
+        <div class="shot-search"><label for="shot-search">Find an image, person or place</label><input id="shot-search" type="search" placeholder="Try Vice City, Cheetah or Lucia…" autocomplete="off"></div>
+      </div>
+      <p id="shot-results" class="small" role="status"></p>
+      <div id="shot-grid" class="shot-grid"></div>
+      <div id="shot-empty" class="shot-empty" hidden><h3>No screenshots found.</h3><p>Try another name or show the whole selection.</p><button id="shot-reset" type="button" class="button primary">Show all screenshots</button></div>
+      <button id="shot-more" type="button" class="button primary">Show more screenshots</button>
+      <p class="shot-credit small">Images © Rockstar Games. Display copies are locally optimised for this fan-made gallery; captions follow Rockstar’s screenshot labels. All three screenshot-page collections are included as of the verification date. Check the publisher’s library for later additions at <a href="https://www.rockstargames.com/VI/media/screenshots" target="_blank" rel="noopener noreferrer">Rockstar Games</a>. Official address: <span class="shot-address">https://www.rockstargames.com/VI/media/screenshots</span></p>
+      <noscript><p>Please enable JavaScript to browse this gallery, or use the official screenshot-library link above.</p></noscript>
+    </section>
+
+    <section class="radio-lounge chapter" id="radio" aria-labelledby="radio-title" data-tone="plum">
+      <div class="chapter-head">
+        <h2 id="radio-title" class="reveal">Take the<br>long way.</h2>
+        <div class="head-copy reveal"><p>Your soundtrack for getting lost. Explore The Album, Justice and Rockstar radio, or tune into Getaway FM.</p><details class="lounge-details"><summary>How playback works</summary><p class="small">The Album, Justice / The Score and Getaway FM play your uploaded MP3s directly. No Spotify or YouTube account needed. Station excerpts stream from Rockstar. <a href="https://www.rockstargames.com/VI/music" target="_blank" rel="noopener noreferrer">Official music & credits</a>.</p></details><a class="button light lounge-jump" href="#radio-library">Choose a track <span aria-hidden="true">↓</span></a></div>
+      </div>
+      <div class="lounge-layout">
+        <div class="lounge-library" id="radio-library">
+          <div class="lounge-tabs" role="group" aria-label="Music collection">
+            <button data-radio-collection="uploads" aria-pressed="true">Getaway FM <span class="collection-count">3</span></button>
+            <button data-radio-collection="album" aria-pressed="false">The Album <span class="collection-count">8</span></button>
+            <button data-radio-collection="score" aria-pressed="false">Justice / The Score <span class="collection-count">2</span></button>
+            <button data-radio-collection="stations" aria-pressed="false">Rockstar radio <span class="collection-count">6</span></button>
+          </div>
+          <label for="radio-search" class="small">Find a track, artist or station</label>
+          <input id="radio-search" type="search" placeholder="Try Combat or Megamundo…" autocomplete="off">
+          <p id="radio-results" class="small" role="status"></p>
+          <div id="radio-tracks" class="lounge-tracks"></div>
+          <details class="lounge-privacy small"><summary>Playback, sources & privacy</summary><p>The eight Album tracks, both Justice / The Score tracks and the three Getaway FM tracks play your supplied MP3 files directly from this preview, in full, without Spotify or YouTube. Uploaded tracks advance automatically within their own collection and repeat. No audio loads before you select a track.</p><p>Flower In A Hurricane and Pusher appear only in Justice / The Score. Playback uses your uploaded files; recording provenance has not been independently verified. Rockstar station excerpts still stream from Rockstar, whose service controls availability and may use cookies. Close stops whichever player is active.</p></details>
+        </div>
+        <div class="lounge-listening">
+          <div class="lounge-cover"><img id="radio-art" src="assets/getaway-cover.jpg" alt="Jason and Lucia Lock and Load artwork supplied for Getaway FM" loading="lazy"></div>
+          <div class="lounge-current"><h3 id="radio-current-title">Getaway FM.</h3><p id="radio-current-artist">Your uploads · Three-track rotation</p></div>
+          <div id="radio-player" class="lounge-provider" hidden tabindex="-1" aria-label="Music player"></div>
+          <p id="radio-status" class="small" role="status">Your own getaway soundtrack. Choose one of the three uploaded tracks to start. No account or external music player needed.</p>
+          <a id="radio-source" class="small" href="https://www.rockstargames.com/VI/music" target="_blank" rel="noopener noreferrer" hidden>Official music source</a>
+          <p id="radio-upload-credit" class="small">Custom station using user-provided MP3s. Titles come from the uploaded filenames; official release status and artist credits have not been verified.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="shortlist chapter" id="shortlist" aria-labelledby="shortlist-title" data-tone="navy">
+      <div class="chapter-head">
+        <h2 id="shortlist-title" class="reveal">Places to<br>disappear.</h2>
+        <div class="head-copy reveal"><p>Keep your own Leonida wish list. Save a place, change the order or take a text copy with you.</p><p class="small">A personal list, not a driving route. It does not edit or synchronise with the embedded map.</p></div>
+      </div>
+      <div class="shortlist-body">
+        <div id="saved-list" class="saved-list" aria-live="polite"><div class="list-empty"><p>No stops.<br>Not yet.</p><a href="#places" class="button primary">Find a place</a></div></div>
+        <aside class="trip-note">
+          <img src="assets/featured.webp" alt="Jason and Lucia beside a car in official GTA VI artwork" loading="lazy">
+          <label for="trip-note">A note for your getaway</label>
+          <textarea id="trip-note" rows="3" maxlength="600" placeholder="Sunset in the Keys. Take the scenic route."></textarea>
+          <p id="storage-status" class="small">Your list lasts for this visit. Export it before leaving or refreshing. No account, no uploads.</p>
+          <div class="list-actions"><button class="button primary" id="export-list" disabled>Export shortlist</button><button class="text-action" id="clear-list" disabled>Clear list</button></div>
+          <p id="list-feedback" class="small" role="status">Save a region above to get started.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="about chapter" id="about" aria-labelledby="about-title" data-tone="dark">
+      <div class="about-heading"><h2 id="about-title" class="reveal">Know what<br>you’re looking at.</h2></div>
+      <div class="answer-band"><h3>Is this Rockstar’s map?</h3><p>No. The embedded map is the <a href="https://map.stateofleonida.net/" target="_blank" rel="noopener noreferrer">State of Leonida community project</a>. Treat its reconstruction and marker interpretations as community research, not a guarantee of final-game geography.</p></div>
+      <div class="answer-band"><h3>What works in the viewer?</h3><p>The provider’s original pan, zoom and marker interface. Expand it for more room, reload it if needed, or open the original site. The map remains under its creators’ control; Vice Atlas does not copy its tiles or replace its controls.</p></div>
+      <div class="answer-band"><h3>Does my list change the map?</h3><p>No. Your shortlist is separate from the map’s markers and accounts. Region names and your note stay in memory for this visit only. Refreshing clears them; export makes a text copy you can keep.</p></div>
+      <div class="answer-band"><h3>Where is the artwork from?</h3><p>GTA VI promotional artwork belongs to Rockstar Games and Take-Two Interactive. See <a href="https://www.rockstargames.com/VI" target="_blank" rel="noopener noreferrer">Rockstar’s GTA VI site</a> and the <a href="https://consolepulse.com/multiplatform/gta/guides/gta-6-vice-city-leonida-locations-guide" target="_blank" rel="noopener noreferrer">six-region location reporting</a>. Fonts load from Google Fonts. The map and radio connect to their providers only when chosen; music artwork and recordings belong to their respective rights holders.</p></div>
+    </section>
+  </main>
+  <footer class="site-footer" data-tone="dark">
+    <a class="footer-wordmark" href="#top">Vice Atlas</a>
+    <div class="footer-middle"><p>The long way<br>looks good on you.</p><div><a href="#map-chapter">Explore the map</a><a href="#places">Explore the places</a><a href="#videos">Official videos</a><a href="#screenshots">Official screenshots</a><a href="#radio">Radio lounge</a><a href="#shortlist">Your shortlist</a></div><div><a href="https://map.stateofleonida.net/" target="_blank" rel="noopener noreferrer">State of Leonida</a><a href="https://www.rockstargames.com/VI" target="_blank" rel="noopener noreferrer">Official GTA VI</a><a href="#about">Credits & context</a></div></div>
+    <div class="footer-legal"><p>An independent fan project. Not affiliated with Rockstar Games, Take-Two Interactive or State of Leonida. GTA VI artwork © Rockstar Games. Community map © its respective creators.</p><a href="#top">Back to the top</a></div>
+  </footer>
+  <aside id="radio-dock" class="radio-dock" aria-label="Radio playback controls" hidden data-ui>
+    <div class="radio-dock-track"><strong id="radio-dock-title"></strong><span id="radio-dock-artist"></span></div>
+    <div class="radio-transport"><button id="radio-prev" aria-label="Previous radio selection">Prev</button><button id="radio-toggle" disabled>Loading…</button><button id="radio-next" aria-label="Next radio selection">Next</button><span id="radio-clock" class="small">0:00</span></div>
+    <div class="radio-dock-actions"><a href="#radio-player">Player</a><button id="radio-close" aria-label="Close radio player">Close ×</button></div>
+    <input id="radio-seek" type="range" min="0" max="1" step="1" value="0" aria-label="Seek in current track" disabled>
+    <progress id="radio-progress" max="1" value="0" aria-label="Current track progress" hidden></progress>
+  </aside>
+  <div id="toast" role="status"></div>
+  <noscript><p class="no-script">The destination notes remain readable. For interactive browsing, <a href="https://map.stateofleonida.net/en/" target="_blank" rel="noopener noreferrer">open the State of Leonida map</a>.</p></noscript>
+  <dialog id="shot-dialog" class="shot-dialog" aria-labelledby="shot-view-title" aria-describedby="shot-view-count">
+    <div class="shot-dialog-head"><div><p class="small">Rockstar Games · Official screenshot</p><h3 id="shot-view-title"></h3></div><button id="shot-close" type="button" autofocus>Close image</button></div>
+    <div id="shot-image-box" class="shot-image-box"><p id="shot-image-status" role="status">Loading image…</p><button id="shot-retry" type="button" hidden>Retry image</button></div>
+    <div class="shot-dialog-foot"><div class="shot-view-nav"><button id="shot-prev" type="button" aria-label="Previous screenshot">Previous</button><p id="shot-view-count" class="small" aria-live="polite"></p><button id="shot-next" type="button" aria-label="Next screenshot">Next</button></div><a id="shot-original" target="_blank" rel="noopener noreferrer">View Rockstar original</a><p class="small">Larger image view · ← / → to browse · Escape to close</p></div>
+  </dialog>
+<script data-pplx-inline-edit>
+(function () {
+  if (window === window.top) return;
+
+  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://perplexity.localhost","http://localhost:1420","http://127.0.0.1:1420","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
+  const MAX_FONT_BYTES = 500 * 1024;
+  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
+  const DEFAULT_LINE_HEIGHT = 16;
+  let scrollForwarding = false;
+  let scrollRaf = 0;
+  let trustedTopOrigin = null;
+
+  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
+  // across multiple labels.
+  function matchesAllowedOrigin(origin) {
+    if (!origin) return false;
+    for (const entry of allowedParentOrigins) {
+      if (!entry.includes("*")) {
+        if (entry === origin) return true;
+        continue;
+      }
+      const pattern = new RegExp(
+        "^" +
+          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
+          "$",
+      );
+      if (pattern.test(origin)) return true;
+    }
+    return false;
+  }
+
+  // Trust decision: when the sender is same-origin-visible (event.origin is a
+  // real origin like https://www.perplexity.ai) we trust event.origin directly.
+  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
+  // broker's stamped `parentOrigin` to identify the top window. The fallback
+  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // on the response path (see postToTrustedTop) to ensure replies can't be
+  // delivered to anyone but the actual top window of that claimed origin.
+  function getTrustedParentOrigin(event) {
+    const forwardedParentOrigin =
+      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
+    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
+    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
+  }
+
+  // All responses go to window.top with targetOrigin = the allowlisted origin.
+  // An attacker that iframes us inside their own null-origin broker can claim
+  // any parentOrigin they like, but the browser will drop the reply whenever
+  // the real top's origin doesn't match — so the screenshot never leaves.
+  function postToTrustedTop(message) {
+    if (!trustedTopOrigin) return;
+    try {
+      window.top.postMessage(message, trustedTopOrigin);
+    } catch (_error) {}
+  }
+
+  const PICK_CAPABILITIES = ["pick"];
+  const PICK_CHAIN_LENGTH = 4;
+  const PICK_MAX_TEXT_CHARS = 120;
+  const PICK_MAX_HTML_CHARS = 300;
+
+  function truncate(value, maxChars) {
+    return value.length > maxChars ? value.slice(0, maxChars - 1) + "…" : value;
+  }
+
+  function isPickableElement(element) {
+    return (
+      element instanceof Element &&
+      element !== document.documentElement &&
+      element !== document.body
+    );
+  }
+
+  function resolvePickTarget(x, y) {
+    if (!Number.isFinite(x) || !Number.isFinite(y)) return null;
+    const element = document.elementFromPoint(x, y);
+    return isPickableElement(element) ? element.closest("svg") || element : null;
+  }
+
+  function pickLabel(element) {
+    if (element.id) return element.localName + "#" + element.id;
+    return [element.localName].concat(Array.from(element.classList).slice(0, 2)).join(".");
+  }
+
+  // Only attributes that help find the element in source. data-* values and URL
+  // query strings or fragments can carry tokens.
+  const PICK_ATTRIBUTES = new Set([
+    "id",
+    "class",
+    "name",
+    "type",
+    "role",
+    "alt",
+    "aria-label",
+    "href",
+    "src",
+  ]);
+
+  function pickAttributeValue(attribute) {
+    return attribute.name === "href" || attribute.name === "src"
+      ? attribute.value.split(/[?#]/)[0]
+      : attribute.value;
+  }
+
+  function describePickElement(element) {
+    const chain = [];
+    for (
+      let current = element;
+      isPickableElement(current) && chain.length < PICK_CHAIN_LENGTH;
+      current = current.parentElement
+    ) {
+      chain.unshift(current);
+    }
+    const attributes = Array.from(element.attributes)
+      .filter((attribute) => PICK_ATTRIBUTES.has(attribute.name))
+      .map((attribute) => ` ${attribute.name}="${pickAttributeValue(attribute).replace(/"/g, "&quot;")}"`)
+      .join("");
+    const text = (element.innerText || element.textContent || "").replace(/\s+/g, " ").trim();
+    return {
+      chain: chain.map(pickLabel),
+      html: truncate(`<${element.localName}${attributes}>`, PICK_MAX_HTML_CHARS),
+      text: text ? truncate(text, PICK_MAX_TEXT_CHARS) : undefined,
+    };
+  }
+
+  // Hover asks once per frame, and innerText on a large section forces layout,
+  // so only the rect is re-read while the pointer stays on the same element.
+  // Clicks ask for fresh details since the page may have changed the element.
+  let lastPick = null;
+
+  function describePickTarget(element, fresh) {
+    if (fresh || lastPick?.element !== element) {
+      lastPick = { element, details: describePickElement(element) };
+    }
+    const rect = element.getBoundingClientRect();
+    return {
+      rect: { x: rect.left, y: rect.top, width: rect.width, height: rect.height },
+      ...lastPick.details,
+    };
+  }
+
+  function inlineAll(original, clone) {
+    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
+
+    try {
+      const computedStyle = getComputedStyle(original);
+      // cssText on a computed style is the serialized declaration in modern
+      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // properties. Firefox returns "" here, so we fall back on empty.
+      const serialized = computedStyle.cssText;
+      if (serialized) {
+        clone.style.cssText = serialized;
+      } else {
+        const parts = new Array(computedStyle.length);
+        for (let index = 0; index < computedStyle.length; index += 1) {
+          const property = computedStyle[index];
+          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
+        }
+        clone.style.cssText = parts.join("");
+      }
+    } catch (_error) {}
+
+    const originalChildren = original.children;
+    const clonedChildren = clone.children;
+    for (
+      let index = 0;
+      index < originalChildren.length && index < clonedChildren.length;
+      index += 1
+    ) {
+      inlineAll(originalChildren[index], clonedChildren[index]);
+    }
+  }
+
+  function extractFontUrl(srcValue) {
+    const matches = [
+      ...srcValue.matchAll(
+        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
+      ),
+    ];
+    if (matches.length === 0) return null;
+    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
+    if (woff2) return woff2[1];
+    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
+    if (woff) return woff[1];
+    return matches[0][1];
+  }
+
+  // Cache resolved font URL -> data URI across captures. Fonts on a page
+  // essentially never change, and a batch run emits multiple captures back to
+  // back — without this we'd refetch + re-base64 every time.
+  const fontDataUriCache = new Map();
+  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
+
+  async function fetchAsDataUri(url) {
+    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
+    let dataUri = null;
+    try {
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+      if (response.ok) {
+        const blob = await response.blob();
+        if (blob.size <= MAX_FONT_BYTES) {
+          dataUri = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () =>
+              resolve(typeof reader.result === "string" ? reader.result : null);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+          });
+        }
+      }
+    } catch (_error) {
+      dataUri = null;
+    }
+    fontDataUriCache.set(url, dataUri);
+    return dataUri;
+  }
+
+  function collectFontFaceRuleTexts() {
+    const rules = [];
+    for (const sheet of document.styleSheets) {
+      let cssRules;
+      try {
+        cssRules = sheet.cssRules;
+      } catch (_error) {
+        continue;
+      }
+      if (!cssRules) continue;
+      for (const rule of cssRules) {
+        const cssText = rule.cssText || "";
+        if (cssText.startsWith("@font-face")) rules.push(cssText);
+      }
+    }
+    return rules;
+  }
+
+  async function buildInlinedFontCss() {
+    const ruleTexts = collectFontFaceRuleTexts();
+    if (ruleTexts.length === 0) return null;
+
+    const resolved = ruleTexts.map((cssText) => {
+      if (!SRC_DECLARATION_RE.test(cssText)) return null;
+      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
+      if (!srcMatch) return null;
+      const url = extractFontUrl(srcMatch[1]);
+      if (!url) return null;
+      try {
+        return { cssText, url: new URL(url, document.baseURI).href };
+      } catch (_error) {
+        return null;
+      }
+    });
+
+    const dataUris = await Promise.all(
+      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
+    );
+
+    const inlined = [];
+    let totalBytes = 0;
+    for (let index = 0; index < resolved.length; index += 1) {
+      const entry = resolved[index];
+      const dataUri = dataUris[index];
+      if (!entry || !dataUri) continue;
+      const approxBytes = dataUri.length * 0.75;
+      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
+      totalBytes += approxBytes;
+      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
+    }
+    return inlined.length > 0 ? inlined.join("\n") : null;
+  }
+
+  function stripExternal(clone) {
+    const images = clone.querySelectorAll("img");
+    for (let index = 0; index < images.length; index += 1) {
+      const src = images[index].getAttribute("src");
+      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
+    }
+
+    const elements = clone.querySelectorAll("*");
+    for (let index = 0; index < elements.length; index += 1) {
+      const style = elements[index].style.cssText;
+      if (style && style.includes("url(")) {
+        elements[index].style.cssText = style.replace(
+          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
+          "none",
+        );
+      }
+    }
+  }
+
+  function emitScroll() {
+    scrollRaf = 0;
+    if (!scrollForwarding) return;
+    postToTrustedTop({
+      type: "INLINE_EDIT_SCROLL",
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+      capabilities: PICK_CAPABILITIES,
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!scrollForwarding || scrollRaf) return;
+      scrollRaf = requestAnimationFrame(emitScroll);
+    },
+    { passive: true, capture: true },
+  );
+
+  async function handleCaptureRequest(event) {
+    const requestId = event.data.requestId;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    function postResult(dataUrl) {
+      postToTrustedTop({
+        type: "INLINE_EDIT_SCREENSHOT_RESULT",
+        requestId,
+        dataUrl,
+        scrollX,
+        scrollY,
+      });
+    }
+
+    try {
+      // Wait for any pending web fonts to resolve so both inline metrics and
+      // the @font-face inlining below see the same loaded faces.
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (_error) {}
+      }
+
+      const clone = document.documentElement.cloneNode(true);
+      inlineAll(document.documentElement, clone);
+
+      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
+      for (let index = 0; index < removedNodes.length; index += 1) {
+        removedNodes[index].remove();
+      }
+
+      stripExternal(clone);
+
+      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
+      // can resolve them — external font URLs aren't fetched during
+      // foreignObject rendering, which would otherwise force a fallback face
+      // and change text metrics.
+      const inlinedFontCss = await buildInlinedFontCss();
+      if (inlinedFontCss) {
+        const styleEl = document.createElement("style");
+        styleEl.textContent = inlinedFontCss;
+        const head = clone.querySelector("head");
+        if (head) head.appendChild(styleEl);
+        else clone.insertBefore(styleEl, clone.firstChild);
+      }
+
+      const html = new XMLSerializer().serializeToString(clone);
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
+        '<foreignObject width="100%" height="100%">' +
+        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
+        `<div style="position:relative;left:-${scrollX}px;top:-${scrollY}px">` +
+        html +
+        "</div></div></foreignObject></svg>";
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      const image = new Image();
+      image.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0);
+        postResult(canvas.toDataURL("image/png"));
+      };
+      image.onerror = function () {
+        postResult(null);
+      };
+      image.src = svgUrl;
+    } catch (_error) {
+      postResult(null);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (!event.data) return;
+    // Only accept messages from the direct parent frame. Blocks sibling /
+    // unrelated-window postMessage senders that could otherwise reach us.
+    if (event.source !== window.parent) return;
+
+    const trustedParentOrigin = getTrustedParentOrigin(event);
+    if (!trustedParentOrigin) return;
+    trustedTopOrigin = trustedParentOrigin;
+
+    if (event.data.type === "INLINE_EDIT_PICK") {
+      const element = resolvePickTarget(event.data.x, event.data.y);
+      postToTrustedTop({
+        type: "INLINE_EDIT_PICK_RESULT",
+        seq: event.data.seq,
+        target: element ? describePickTarget(element, event.data.fresh === true) : null,
+      });
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
+      scrollForwarding = true;
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
+      scrollForwarding = false;
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = 0;
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_BY") {
+      const { deltaX, deltaY, deltaMode } = event.data;
+      if (!scrollForwarding || !Number.isFinite(deltaX) || !Number.isFinite(deltaY)) return;
+      if (deltaMode !== 0 && deltaMode !== 1 && deltaMode !== 2) return;
+      const lineHeight =
+        parseFloat(getComputedStyle(document.documentElement).lineHeight) || DEFAULT_LINE_HEIGHT;
+      const scaleX = deltaMode === 1 ? lineHeight : deltaMode === 2 ? window.innerWidth : 1;
+      const scaleY = deltaMode === 1 ? lineHeight : deltaMode === 2 ? window.innerHeight : 1;
+      // The selection overlay receives the wheel event instead of this iframe.
+      // Instant scrolling preserves trackpad deltas even on smooth-scroll sites.
+      window.scrollBy({ left: deltaX * scaleX, top: deltaY * scaleY, behavior: "instant" });
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
+
+    handleCaptureRequest(event);
+  });
+})();
+
+
+</script></body>
+</html>

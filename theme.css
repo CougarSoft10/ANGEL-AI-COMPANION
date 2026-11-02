@@ -1,0 +1,62 @@
+/* Palette sampled from the official GTA VI site. Existing layout and media stay intact. */
+:root{
+  color-scheme:dark;
+  --field-navy:#243152;
+  --field-forest:#162623;
+  --field-plum:#4b2f54;
+  --deep:#0c0d1b;
+}
+body,.hero,.video-chapter,.about{background:var(--ink);color:var(--paper)}
+.site-header{background:var(--ink);color:var(--paper)}
+.places,.shortlist{background:var(--field-navy);color:var(--paper)}
+.screenshot-chapter{background:var(--field-forest);color:var(--paper)}
+.radio-lounge{background:var(--field-plum);color:var(--paper)}
+.site-footer{background:var(--deep);color:var(--paper)}
+.answer-band:nth-child(odd){background:var(--surface)}
+h1,h2{color:var(--pink)}
+.hero-bottom>a{background:var(--surface);color:var(--paper)}
+.primary,.light{background:var(--pink);color:var(--deep)}
+.primary:hover,.light:hover{background:var(--mint);color:var(--deep)}
+::selection{background:var(--pink);color:var(--deep)}
+:focus-visible{outline-color:var(--pink)}
+.primary:focus-visible,.light:focus-visible{outline-color:var(--paper)}
+.head-copy>.small,.map-credit,.shot-credit,.video-note,.lounge-privacy,
+.trip-note>.small,.footer-legal,.footer-middle>div{color:var(--mint)}
+p.small,.map-credit,.shot-credit,.video-note,.lounge-privacy,.footer-legal p,.map-foot p{font-size:1rem;max-width:64ch}
+.site-header nav a:hover,.text-action:hover,.surprise-button:hover{color:var(--pink);opacity:1}
+.site-header nav.open{background:var(--surface);color:var(--paper)}
+.map-shell,.map-shell.is-expanded .map-toolbar,.video-feature,.video-age,
+.lounge-provider>p,.lounge-empty,.video-empty,.radio-dock{background:var(--surface);color:var(--paper)}
+.viewer-actions button,.saved-item-actions button,.shot-dialog button,
+.video-fullscreen-bar button,.video-browse{background:var(--surface);color:var(--paper)}
+.viewer-actions button:hover:not(:disabled),.saved-item-actions button:hover:not(:disabled),
+.shot-dialog button:hover,.video-fullscreen-bar button:hover,.video-browse:hover{background:var(--pink);color:var(--deep)}
+.place-index input,.shot-search input,#video-search,#radio-search,.trip-note textarea,
+.video-search-field{background:var(--surface);color:var(--paper)}
+.place-index input::placeholder,.shot-search input::placeholder,#video-search::placeholder,
+#radio-search::placeholder,.trip-note textarea::placeholder{color:var(--mint);opacity:1}
+#video-clear{color:var(--paper)}
+.place-options button:hover{background:var(--surface);color:var(--paper)}
+.place-options button.selected{background:var(--pink);color:var(--deep)}
+.shot-filters button,.video-filters button,.lounge-tabs button{background:var(--surface);color:var(--paper)}
+.shot-filters button[aria-pressed=true],.video-filters button[aria-pressed=true],
+.lounge-tabs button[aria-pressed=true]{background:var(--pink);color:var(--deep)}
+.shot-filters button:hover:not([aria-pressed=true]),
+.video-filters button:hover:not([aria-pressed=true]),
+.lounge-tabs button:hover:not([aria-pressed=true]){background:var(--mint);color:var(--deep)}
+.shot-caption small,.shot-dialog a,.video-feature-actions>a{color:var(--pink)}
+.shot-dialog-head,.shot-dialog-foot,.video-fullscreen-bar{background:var(--ink);color:var(--paper)}
+.video-play-word,.video-card[aria-pressed=true] .video-play-word{background:var(--pink);color:var(--deep)}
+.video-card[aria-pressed=true] .video-thumb{outline-color:var(--pink)}
+.video-tools{background:var(--ink);border-bottom:0}
+.video-card{border-bottom:0}
+.video-card[aria-pressed=true]{background:var(--surface)}
+.lounge-track[aria-pressed=true]{background:var(--pink);color:var(--deep)}
+#radio-toggle{background:var(--pink);color:var(--deep)}
+#radio-toggle:hover{background:var(--mint);color:var(--deep)}
+#radio-progress,#radio-progress::-webkit-progress-bar{background:var(--deep)}
+#radio-progress::-webkit-progress-value{background:var(--pink)}
+#radio-progress::-moz-progress-bar{background:var(--pink)}
+#toast{background:var(--pink);color:var(--deep)}
+.no-script{background:var(--surface);color:var(--paper)}
+@media(max-width:700px){.hero-bottom>a{background:transparent;color:var(--pink)}}
